@@ -1,1 +1,19 @@
 # Image-Handling-and-Processing-for-Efficient-Parking-Space-Detection-and-Navigation-Aid
+This project was implemented as my capstone project during my Under Graduate studies, the idea was to create a detection algorithm for areas with unclear boundaries and segments where conventional algorithms fail. The data from the algorithm is uploaded to dedicated servers. The data can be uploaded to self-driving vehicles to detect empty and guide the vehicles to empty parking space in crowded and large parking areas<br />
+The results can also be viewed on the website [//carparking996.000webhostapp.com/reserve.php](//carparking996.000webhostapp.com/reserve.php)<br />
+The published paper can be viewed at [//arxiv.org/abs/1807.02424](//arxiv.org/abs/1807.02424)<br />
+
+File d_up1.py iploads data in text format to Dropbox regarding the vacancy of the slots<br />
+File d_up2.py uploads the image to Dropbox
+
+## Abstract
+This paper aims to develop a robust and flexible algorithm for vacant parking space detections using the image processing capabilities of OpenCV. It removes the need for independent sensors to detect a car and instead, uses real-time images derived from various sources and servers to consider a group of slots together. This greatly decreases the expenses required to design an efficient parking system and increases the flexibility of the operation. This method includes the use of a portable processing system with recognition algorithm and has the option of extracting and importing images to the specified servers. The results can be viewed on a custom website with the option to reserve the particular empty slots and GPS navigations to the selected slots
+## Results
+![screenshot 89](https://user-images.githubusercontent.com/41950483/46919955-3204b680-cfb5-11e8-8189-5be0a046a2ed.png)<br />
+![screenshot 90](https://user-images.githubusercontent.com/41950483/46919956-38932e00-cfb5-11e8-9a83-ca6046d57129.png)<br />
+![screenshot 100](https://user-images.githubusercontent.com/41950483/46919961-434dc300-cfb5-11e8-883a-0a0379d12d0e.png)![screenshot 91](https://user-images.githubusercontent.com/41950483/46919968-49dc3a80-cfb5-11e8-999b-ed2bdcd2f74f.png)<br />
+The figure on the right shows the website GUI  used to display the results to the user synonymous to the slots detected in the image on left. It uses a slot like system to convert the string of data to be visualized by the user. The user also has the option to reserve the slots or to view the location of the vacant slots<br />
+![screenshot 92](https://user-images.githubusercontent.com/41950483/46919972-52cd0c00-cfb5-11e8-83b0-17eac88e6fb6.png)![screenshot 93](https://user-images.githubusercontent.com/41950483/46919976-5a8cb080-cfb5-11e8-9336-5af662086a17.png)<br />
+Figure on the top displays the GPS location points assigned to the vacant parking slots. The user has the option to view the location of the vacant slots, which can be fed to autonomous vehicle or other devices for destination identification. Figure on the bottom displays the route to the destination selected. Instead of manually searching for slots, the proposed algorithm has the ability to find the vacant slots and route towards it, with the help of google maps. 
+## Inference
+Parking slot detections with conventional algorithms give false positives in areas where the slot lines are distorted and when the vehicles overlap with slots itself. Even the amount of excess noise i.e. random vehicles and people loitering lead to false detection. The algorithm proposed was designed to combat these situations. The algorithm combines the image processing capabilities of OpenCV with the flexibility of Raspberry Pi for feasible and efficient Detection algorithms. Using various modules and cases made the algorithm robust and enables it to handle real life cases. The algorithm proposed has an efficient false contour detection and elimination technique to remove false predictions
